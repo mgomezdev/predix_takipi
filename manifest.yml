@@ -1,9 +1,7 @@
 ---
 applications:
   - name: hello_play
-    buildpack: https://github.com/chook/cloudfoundry-java-takipi.git
+    buildpack: https://github.com/Fewbytes/java-buildpack#takipi
     path: target/universal/play-scala-intro-1.0-SNAPSHOT.zip
     env:
-        TAKIPI_SECRET_KEY: S16899#AEALRXSjdv4qkduR#kelSB+M2DsnU+UILg0LOtJUh+0xcN3DbI+/PRjpQQHo=#2725
-        JAVA_OPTS: "-agentlib:TakipiAgent"
-        
+        JBP_CONFIG_TAKIPI_AGENT = '{"secret_key" : "S16899#AEALRXSjdv4qkduR#kelSB+M2DsnU+UILg0LOtJUh+0xcN3DbI+/PRjpQQHo=#2725"}'
